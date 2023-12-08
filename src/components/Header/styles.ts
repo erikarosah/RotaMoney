@@ -37,4 +37,16 @@ export const Content = styled.div`
             filter: opacity(0.9);
         }
     }
+
+    @media(max-width: 418px) {
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+    
+    @media(max-width: 320px) {
+        h1 {
+            font-size: 1.2rem;
+        }
+    }
 `;
