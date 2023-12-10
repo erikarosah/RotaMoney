@@ -3,7 +3,7 @@ import { Container } from "./styles";
 interface Props {
     title: string;
     src: string;
-    total: string;
+    total: number;
     className?: boolean;
 }
 
@@ -14,7 +14,12 @@ export function Summary(props: Props) {
                 <p>{props.title}</p>
                 <img src={props.src} alt="Resumo"/>
             </header>
-            <strong>R$ {props.total}</strong>
+            <strong>
+                {new Intl.NumberFormat("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                }).format(props.total)}
+            </strong>
         </Container>
     )
 }
